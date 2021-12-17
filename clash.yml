@@ -201,9 +201,9 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
   
-   list_own:
+  list_own:
     type: http
-    url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
+    url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsublist.521111114.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D1f773c30934749793b3b66bc5ccc859d"
     interval: 86400
     path: ./Sub/own.yaml # 注意此处文件名不可相同
     health-check:
