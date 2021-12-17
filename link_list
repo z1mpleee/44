@@ -1,7 +1,7 @@
 clash: https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash.yml
 
-quanx: https://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@github.com/z1mpleee/sub/blob/main/quanx.conf?raw=true
+quanx: https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx.conf
 
-node: https://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@github.com/z1mpleee/sub/blob/main/node?raw=true
+node: https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
 
 sub: http://oralce.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
