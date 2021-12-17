@@ -205,7 +205,7 @@ proxy-providers:
     type: http
     url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fapi.flgwls.com%2Flink%2FL4TacBhfNfCioBuW%3Fclash%3D1"
     interval: 86400
-    path: ./Sub/dukou.yaml # 注意此处文件名不可相同
+    path: ./Sub/abc.yaml # 注意此处文件名不可相同
     health-check:
       enable: false
       interval: 86400
@@ -253,17 +253,12 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - dukou
+      - abc
 
-  #  - name: "own"
-  #   type: select # 亦可使用 fallback 或 load-balance
-  #   use: # 注意此处是「use」
-  #     - list_own # 这是上面「proxy-providers」的名称
-
-  - name: "dukou"
+  - name: "abc"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_dukou # 这是上面「proxy-providers」的名称
+      - list_abc # 这是上面「proxy-providers」的名称
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
