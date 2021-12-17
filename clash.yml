@@ -201,17 +201,7 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
 
-  # list_own:
-  #   type: http
-  #   url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Flink.jscdn.cn%2F1drv%2FaHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXFLMndteEIxeEFsSHd0bXRzU1Y1WnVZT0twP2U9MWFGaHFo"
-  #   interval: 86400
-  #   path: ./Sub/own.yaml # 注意此处文件名不可相同
-  #   health-check:
-  #     enable: false
-  #     interval: 86400
-  #     url: http://www.gstatic.com/generate_204
-
-  list_dukou:
+  list_abc:
     type: http
     url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fapi.flgwls.com%2Flink%2FL4TacBhfNfCioBuW%3Fclash%3D1"
     interval: 86400
