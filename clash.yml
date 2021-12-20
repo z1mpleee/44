@@ -211,15 +211,6 @@ proxy-providers:
       interval: 86400
       url: http://www.gstatic.com/generate_204
 
-  list_abc:
-    type: http
-    url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsublist.521111114.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D1f773c30934749793b3b66bc5ccc859d"
-    interval: 86400
-    path: ./Sub/abc.yaml # 注意此处文件名不可相同
-    health-check:
-      enable: false
-      interval: 86400
-      url: http://www.gstatic.com/generate_204
   list_element:
     type: http
     url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fapi.yuansu.app%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D7a1304f93e26205c22552230e82eb72a"
@@ -273,18 +264,12 @@ proxy-groups:
     type: select
     proxies:
       - own
-      - abc
       - element
       
   - name: "own"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - list_own # 这是上面「proxy-providers」的名称
-
-  - name: "abc"
-    type: select # 亦可使用 fallback 或 load-balance
-    use: # 注意此处是「use」
-      - list_abc # 这是上面「proxy-providers」的名称
 
   - name: "element"
     type: select # 亦可使用 fallback 或 load-balance
