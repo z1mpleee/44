@@ -378,6 +378,9 @@ rules:
 
   # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
   - RULE-SET,Global,PROXY
+  
+  # Apple Music
+  - RULE-SET,AppleMusic,AppleMusic
 
   # China Area Network
   - RULE-SET,China,DIRECT
@@ -400,6 +403,3 @@ rules:
   # - GEOIP,CN,DIRECT
 
   - MATCH,MATCH
-
-  # Apple Music
-  - RULE-SET,AppleMusic,AppleMusic
