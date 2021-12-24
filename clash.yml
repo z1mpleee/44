@@ -219,7 +219,17 @@ proxy-providers:
     health-check:
       enable: false
       interval: 86400
-      url: http://www.gstatic.com/generate_204      
+      url: http://www.gstatic.com/generate_204
+
+  list_cat:
+    type: http
+    url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsubs.xn--burp52e.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Da84eb89e194643368e3954769dad06da"
+    interval: 86400
+    path: ./Sub/cat.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: false
+      interval: 86400
+      url: http://www.gstatic.com/generate_204
 
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/wiki/configuration
@@ -265,6 +275,7 @@ proxy-groups:
     proxies:
       - own
       - element
+      - cat
       
   - name: "own"
     type: select # 亦可使用 fallback 或 load-balance
@@ -274,7 +285,12 @@ proxy-groups:
   - name: "element"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_element # 这是上面「proxy-providers」的名称      
+      - list_element # 这是上面「proxy-providers」的名称
+
+  - name: "cat"
+    type: select # 亦可使用 fallback 或 load-balance
+    use: # 注意此处是「use」
+      - list_cat # 这是上面「proxy-providers」的名称
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
