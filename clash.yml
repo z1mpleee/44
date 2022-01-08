@@ -213,7 +213,7 @@ proxy-providers:
 
   list_cat:
     type: http
-    url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsubs.xn--burp52e.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Da84eb89e194643368e3954769dad06da"
+    url: "http://oracle.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsubs.xn--burp52e.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D19476a1248e990fdef3ddc36aacd9c23"
     interval: 86400
     path: ./Sub/cat.yaml # 注意此处文件名不可相同
     health-check:
