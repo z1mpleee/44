@@ -201,7 +201,7 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
   
-  list_own:
+  list_self:
     type: http
     url: "http://sub.wuyifan.xyz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
     interval: 86400
@@ -263,13 +263,13 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - own
+      - self
       - cat
       
-  - name: "own"
+  - name: "self"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_own # 这是上面「proxy-providers」的名称
+      - list_self # 这是上面「proxy-providers」的名称
 
   - name: "cat"
     type: select # 亦可使用 fallback 或 load-balance
