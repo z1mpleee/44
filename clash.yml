@@ -210,6 +210,16 @@ proxy-providers:
       enable: false
       interval: 86400
       url: http://www.gstatic.com/generate_204
+  
+  list_fishport:
+    type: http
+    url: "http://sub.wuyifan.xyz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsubs.fishport.cloud%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D40ea6f9de3147312b5163d91ee9bd361"
+    interval: 86400
+    path: ./Sub/fishport.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: false
+      interval: 86400
+      url: http://www.gstatic.com/generate_204
 
   list_element:
     type: http
@@ -274,6 +284,7 @@ proxy-groups:
     type: select
     proxies:
       - self
+      - fishport
       - element
       - cat
       
@@ -281,6 +292,11 @@ proxy-groups:
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - list_self # 这是上面「proxy-providers」的名称
+      
+  - name: "fishport"
+    type: select # 亦可使用 fallback 或 load-balance
+    use: # 注意此处是「use」
+      - list_fishport # 这是上面「proxy-providers」的名称
 
   - name: "element"
     type: select # 亦可使用 fallback 或 load-balance
