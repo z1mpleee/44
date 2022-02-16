@@ -1,7 +1,7 @@
-clash: https://cdn.jsdelivr.net/gh/z1mpleee/44@ma1n/clash.yml
+clash: https://raw.sevencdn.com/z1mpleee/44/ma1n/clash.yml
 
-quanx: https://cdn.jsdelivr.net/gh/z1mpleee/44@ma1n/quanx.conf
+quanx: https://raw.sevencdn.com/z1mpleee/44/ma1n/quanx.conf
 
-node: https://cdn.jsdelivr.net/gh/z1mpleee/44@ma1n/own
+node: https://raw.sevencdn.com/z1mpleee/44/ma1n/own
 
 sub: http://oralce.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
