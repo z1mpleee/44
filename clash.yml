@@ -221,11 +221,11 @@ proxy-providers:
       interval: 86400
       url: http://www.gstatic.com/generate_204
   
-  list_fishport:
+  list_element:
     type: http
-    url: "http://sub.wuyifan.xyz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsubs.fishport.cloud%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D40ea6f9de3147312b5163d91ee9bd361"
+    url: "http://sub.wuyifan.xyz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fapi.yuansu.app%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D6d851e41c7d2a77ecf926473ed5d0cb6"
     interval: 86400
-    path: ./Sub/fishport.yaml # 注意此处文件名不可相同
+    path: ./Sub/element.yaml # 注意此处文件名不可相同
     health-check:
       enable: false
       interval: 86400
@@ -275,7 +275,7 @@ proxy-groups:
     proxies:
       - self
       - duang
-      - fishport
+      - element
       
   - name: "self"
     type: select # 亦可使用 fallback 或 load-balance
@@ -287,10 +287,10 @@ proxy-groups:
     use: # 注意此处是「use」
       - list_duang # 这是上面「proxy-providers」的名称
       
-  - name: "fishport"
+  - name: "element"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_fishport # 这是上面「proxy-providers」的名称
+      - list_element # 这是上面「proxy-providers」的名称
 
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
