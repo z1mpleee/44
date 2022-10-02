@@ -210,16 +210,6 @@ proxy-providers:
       enable: false
       interval: 86400
       url: http://www.gstatic.com/generate_204
-      
-  list_xsus:
-    type: http
-    url: "http://sub.wuyifan.xyz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fxsus.buzz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dfedcec9b871edd600bd32c6d82a80dfb"
-    interval: 86400
-    path: ./Sub/xsus.yaml # 注意此处文件名不可相同
-    health-check:
-      enable: false
-      interval: 86400
-      url: http://www.gstatic.com/generate_204
   
   list_dukou:
     type: http
@@ -274,18 +264,12 @@ proxy-groups:
     type: select
     proxies:
       - self
-      - xsus
       - dukou
       
   - name: "self"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
       - list_self # 这是上面「proxy-providers」的名称
-      
-  - name: "xsus"
-    type: select # 亦可使用 fallback 或 load-balance
-    use: # 注意此处是「use」
-      - list_xsus # 这是上面「proxy-providers」的名称
       
   - name: "dukou"
     type: select # 亦可使用 fallback 或 load-balance
