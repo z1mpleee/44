@@ -2,9 +2,17 @@
     "spider":"http://ftp6284928.host108.abeiyun.cn/jar/tvbox.txt;md5;a4bf71ea71185b7815d3e94d591a7c51",
     "wallpaper":"http://www.kf666888.cn/api/tvbox/img",
     "lives":[{
-      "name":"live",
+      "name":"live1",
       "type":0,
-      "url":["https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/global.m3u", "https://raw.gitmirror.com/z1mpleee/44/main/iptv.txt"], 
+      "url":"https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/global.m3u", 
+      "playerType":1,
+      "ua":"okhttp/3.12.13",
+      // "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo":"https://epg.112114.xyz/logo/{name}.png"
+    },{
+      "name":"live2",
+      "type":0,
+      "url":"https://raw.gitmirror.com/z1mpleee/44/main/iptv.txt", 
       "playerType":1,
       "ua":"okhttp/3.12.13",
       // "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
