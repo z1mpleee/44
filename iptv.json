@@ -1,0 +1,28 @@
+{
+    "spider": "https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431",
+    "wallpaper": "http://饭太硬.ga/深色壁纸/api.php",
+    "lives": [
+      {
+        "name": "fanming",
+        "type": 0,
+        "url": "https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/global.m3u",
+        "playerType": 1,
+        "epg": "https://live.fanmingming.com/e.xml"
+      },
+      {
+        "name": "beiyong",
+        "type": 0,
+        "url": "https://raw.gitmirror.com/z1mpleee/44/main/test.txt",
+        "playerType": 1,
+        "epg": "https://live.fanmingming.com/e.xml"
+      },
+      {
+        "name": "♻️MTV",
+        "type": 0,
+        "url": "https://pan.shangui.cc/f/Z4ALHv/MTV.txt",
+        "playerType": 1,
+        "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+        "logo": "https://epg.112114.xyz/logo/{name}.png"
+      }
+    ]
+  }
