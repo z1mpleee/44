@@ -9,14 +9,6 @@
       "ua":"okhttp/3.12.13",
       // "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
       "logo":"https://epg.112114.xyz/logo/{name}.png"
-    },{
-      "name":"live2",
-      "type":0,
-      "url":"https://raw.gitmirror.com/z1mpleee/44/main/iptv.txt", 
-      "playerType":1,
-      "ua":"okhttp/3.12.13",
-      // "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo":"https://epg.112114.xyz/logo/{name}.png"
     }],
     "sites":[
       {"key":"csp_WoGG","name":"玩偶哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://tvfan.xxooo.cf/"},
