@@ -4,15 +4,15 @@
     "lives":[{
     "name":"live",
     "type":0,
-    "url":"https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/global.m3u", 
+    "url":"http://sub.ihoo.lol:9090/config", 
     "playerType":1,
     "ua":"okhttp/3.12.13",
     "epg":"http://epg.112114.xyz/?ch={name}&date={date}",
     "logo":"https://epg.112114.xyz/logo/{name}.png"
     }],
     "sites":[
-      {"key":"csp_WoGG","name":"TVBox","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://tvfan.xxooo.cf/"},
-      {"key":"csp_Kunyu77","name":"七七","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1}
+      {"key":"csp_WoGG","name":"TVBox1","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://tvfan.xxooo.cf/"},
+      {"key":"csp_Kunyu77","name":"TVBox2","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1}
     ],
     "parses":[
       {"name":"Web聚合","type":3,"url":"Web"},
