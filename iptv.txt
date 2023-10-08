@@ -1,7 +1,4 @@
 备用,#genre#
-TVB翡翠台,http://113.117.74.19:8081/hls/25/index.m3u8
-TVB翡翠台,http://113.117.74.18:8081/hls/25/index.m3u8
-TVB翡翠台,https://pi.0472.org/tv/fct.php?auth=2309081833
 TVB翡翠台,http://r.jdshipin.com/qClQf
 TVB翡翠台,http://suixiaobin.dsmynas.net:5666/gudou.php?phone=freeuser&ptoken=8S6lHDnZOXb8fZ91xEBYwg%3D%3D&pserialnumber=004bfc8f56cd2797&cid=1332&id=1350_4500
 TVB翡翠台,http://suixiaobin.dsmynas.net:5666/gudou.php?phone=13022928532&ptoken=SZESNUL4i2PcZZKV1JA9jw%3D%3D&pserialnumber=63eee104cf9602bf&cid=860&id=1350_4500
