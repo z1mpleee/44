@@ -1,7 +1,9 @@
 clash: https://raw.gitmirror.com/z1mpleee/44/ma1n/clash.yml
 
-quanx: https://raw.sevencdn.com/z1mpleee/44/ma1n/quanx.conf
+clash_DivineEngine.yml: https://raw.gitmirror.com/z1mpleee/44/ma1n/clash_DivineEngine.yml
 
-node: https://raw.sevencdn.com/z1mpleee/44/ma1n/own
+quanx: https://raw.gitmirror.com/z1mpleee/44/ma1n/quanx.conf
+
+node: https://raw.gitmirror.com/z1mpleee/44/ma1n/own
 
 sub: http://oralce.radiogaga.cf:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
