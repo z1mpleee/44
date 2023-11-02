@@ -203,7 +203,7 @@ proxy-providers:
   
   list_self:
     type: http
-    url: "http://sub.ihoo.lol:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
+    url: "http://sub.ihoo.lol:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.gitmirror.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
     interval: 86400
     path: ./Sub/self.yaml # 注意此处文件名不可相同
     health-check:
