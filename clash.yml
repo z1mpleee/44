@@ -400,13 +400,13 @@ rules:
   - RULE-SET, Proxy, PROXY
   # 直连域名列表
   - RULE-SET, Direct, DIRECT
-  # 中国大陆 IP 地址列表
-  - RULE-SET, Cncidr, DIRECT
-
-  # 局域网 IP 及保留 IP 地址列表
-  - RULE-SET, Lancidr, DIRECT
   # Telegram 使用的 IP 地址列表
   - RULE-SET, Telegramcidr, PROXY
+  
+  # 中国大陆 IP 地址列表
+  - RULE-SET, Cncidr, DIRECT
+  # 局域网 IP 及保留 IP 地址列表
+  - RULE-SET, Lancidr, DIRECT
 
   - GEOIP, LAN, DIRECT
   - GEOIP, CN, DIRECT
