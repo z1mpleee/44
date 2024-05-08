@@ -370,13 +370,6 @@ rule-providers:
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
-  Telegramcidr:
-    type: http
-    behavior: ipcidr
-    url: "https://gh.bibibi.lat/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
-    interval: 86400
-
 # 规则
 rules:
   # 需要直连的常见软件列表
@@ -396,12 +389,10 @@ rules:
   # Apple 在中国大陆可直连的域名列表
   - RULE-SET, Apple, Apple
 
-  # 代理域名列表
-  - RULE-SET, Proxy, PROXY
   # 直连域名列表
   - RULE-SET, Direct, DIRECT
-  # Telegram 使用的 IP 地址列表
-  - RULE-SET, Telegramcidr, PROXY
+  # 代理域名列表
+  - RULE-SET, Proxy, PROXY
   
   # 中国大陆 IP 地址列表
   - RULE-SET, Cncidr, DIRECT
