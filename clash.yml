@@ -282,20 +282,6 @@ proxy-groups:
     proxies:
       - PROXY
       - DIRECT
-  
-  # iCloud 域名列表
-  - name: "Icloud"
-    type: select
-    proxies:
-      - DIRECT
-      - PROXY
-  
-  # Apple 在中国大陆可直连的域名列表
-  - name: "Apple"
-    type: select
-    proxies:
-      - DIRECT
-      - PROXY
 
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
 
@@ -342,18 +328,18 @@ rule-providers:
     path: ./ruleset/apple.yaml
     interval: 86400
 
-  Proxy:
-    type: http
-    behavior: domain
-    url: "https://gh.bibibi.lat/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
-    path: ./ruleset/proxy.yaml
-    interval: 86400
-
   Direct:
     type: http
     behavior: domain
     url: "https://gh.bibibi.lat/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
     path: ./ruleset/direct.yaml
+    interval: 86400v
+
+  Proxy:
+    type: http
+    behavior: domain
+    url: "https://gh.bibibi.lat/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./ruleset/proxy.yaml
     interval: 86400
 
   Cncidr:
@@ -385,9 +371,9 @@ rules:
   - RULE-SET, Reject, REJECT
 
   # iCloud 域名列表
-  - RULE-SET, Icloud, Icloud
+  - RULE-SET, Icloud, DIRECT
   # Apple 在中国大陆可直连的域名列表
-  - RULE-SET, Apple, Apple
+  - RULE-SET, Apple, DIRECT
 
   # 直连域名列表
   - RULE-SET, Direct, DIRECT
