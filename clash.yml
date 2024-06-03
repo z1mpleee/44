@@ -333,7 +333,7 @@ rule-providers:
     behavior: domain
     url: "https://gh.bibibi.lat/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
     path: ./ruleset/direct.yaml
-    interval: 86400v
+    interval: 86400
 
   Proxy:
     type: http
