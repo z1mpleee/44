@@ -201,7 +201,7 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
   
-  list_Oracle:
+  list_oracle:
     type: http
     url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
     interval: 86400
@@ -211,7 +211,7 @@ proxy-providers:
       interval: 86400
       url: http://www.gstatic.com/generate_204
   
-  list_OuO:
+  list_ouo:
     type: http
     url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsub.ouoboom.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Da854c79b06f99e28e8b8219fbc039e3b"
     interval: 86400
@@ -259,22 +259,22 @@ proxy-groups:
   #   url: 'http://www.gstatic.com/generate_204'
   #   interval: 300
 
-  - name: "Self"
+  - name: "Oracle"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_self # 这是上面「proxy-providers」的名称
+      - list_oracle # 这是上面「proxy-providers」的名称
       
-  - name: "Dukou"
+  - name: "OuO"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_dukou # 这是上面「proxy-providers」的名称
+      - list_ouo # 这是上面「proxy-providers」的名称
 
   # 代理节点选择
   - name: "PROXY"
     type: select
     proxies:
-      - Self
-      - Dukou
+      - Oracle
+      - OuO
       
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
   - name: "MATCH"
