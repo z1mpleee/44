@@ -201,21 +201,21 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
   
-  list_self:
+  list_Oracle:
     type: http
     url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
     interval: 86400
-    path: ./Sub/self.yaml # 注意此处文件名不可相同
+    path: ./Sub/oracle.yaml # 注意此处文件名不可相同
     health-check:
       enable: false
       interval: 86400
       url: http://www.gstatic.com/generate_204
   
-  list_dukou:
+  list_OuO:
     type: http
-    url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Frfp4ucx.xyz%2Flink%2FLeeVH3YzJ5FBTSyX%3Fclash%3D1"
+    url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fsub.ouoboom.xyz%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Da854c79b06f99e28e8b8219fbc039e3b"
     interval: 86400
-    path: ./Sub/dukou.yaml # 注意此处文件名不可相同
+    path: ./Sub/ouo.yaml # 注意此处文件名不可相同
     health-check:
       enable: false
       interval: 86400
