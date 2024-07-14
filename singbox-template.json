@@ -80,13 +80,21 @@
             "tag": "dns-out"
         },
         {
+            "type": "urltest",
+            "tag": "auto",
+            "outbounds": [
+                "{OuO}",
+                "{Oracle}"
+            ]
+        },
+        {
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "hk",
-                "{all}"
+                "{OuO}",
+                "{Oracle}"
             ],
-            "default": "hk"
+            "default": "{OuO}"
         },
         {
             "type": "selector",
@@ -95,14 +103,6 @@
                 "proxy"
             ],
             "default": "proxy"
-        },
-        {
-            "type": "shadowsocks",
-            "tag": "hk",
-            "server": "acd2e55a7c28a486.cdn.jiashule.com",
-            "server_port": 48776,
-            "method": "aes-128-gcm",
-            "password": "ea352c13-7671-4ff5-be73-08588066bc9f"
         }
     ],
     "route": {
@@ -141,21 +141,21 @@
                 "tag": "geoip-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy"
+                "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                "download_detour": "proxy"
+                "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-bing",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
-                "download_detour": "proxy"
+                "download_detour": "auto"
             }
         ],
         "auto_detect_interface": true,
@@ -168,7 +168,7 @@
         "clash_api": {
             "external_controller": "127.0.0.1:9090",
             "external_ui": "ui",
-            "external_ui_download_detour": "proxy",
+            "external_ui_download_detour": "auto",
             "default_mode": "rule"
         }
     }
