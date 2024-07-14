@@ -1,0 +1,175 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "default-dns",
+                "address": "dhcp://auto",
+                "detour": "direct-out"
+            },
+            {
+                "tag": "block-dns",
+                "address": "rcode://name_error"
+            },
+            {
+                "tag": "proxy-dns",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "default-dns",
+                "address_strategy": "prefer_ipv4",
+                "strategy": "ipv4_only",
+                "client_subnet": "202.96.128.86"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "default-dns"
+            },
+            {
+                "clash_mode": "direct",
+                "server": "default-dns"
+            },
+            {
+                "clash_mode": "global",
+                "server": "proxy-dns"
+            },
+            {
+                "rule_set": [
+                    "geosite-cn",
+                    "geosite-bing"
+                ],
+                "server": "default-dns"
+            }
+        ],
+        "strategy": "prefer_ipv4",
+        "disable_cache": false,
+        "disable_expire": false,
+        "independent_cache": false,
+        "final": "proxy-dns"
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "mtu": 9000,
+            "gso": true,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "sniff": true,
+            "sniff_override_destination": false
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct-out",
+            "routing_mark": 100
+        },
+        {
+            "type": "block",
+            "tag": "block-out"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        },
+        {
+            "type": "selector",
+            "tag": "proxy",
+            "outbounds": [
+                "hk",
+                "{all}"
+            ],
+            "default": "hk"
+        },
+        {
+            "type": "selector",
+            "tag": "GLOBAL",
+            "outbounds": [
+                "proxy"
+            ],
+            "default": "proxy"
+        },
+        {
+            "type": "shadowsocks",
+            "tag": "hk",
+            "server": "acd2e55a7c28a486.cdn.jiashule.com",
+            "server_port": 48776,
+            "method": "aes-128-gcm",
+            "password": "ea352c13-7671-4ff5-be73-08588066bc9f"
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "domain": [
+                    "tplogin.cn",
+                    "miwifi.com"
+                ],
+                "outbound": "direct-out"
+            },
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "clash_mode": "direct",
+                "outbound": "direct-out"
+            },
+            {
+                "clash_mode": "global",
+                "outbound": "GLOBAL"
+            },
+            {
+                "rule_set": [
+                    "geoip-cn",
+                    "geosite-cn",
+                    "geosite-bing"
+                ],
+                "outbound": "direct-out"
+            }
+        ],
+        "rule_set": [
+            {
+                "type": "remote",
+                "tag": "geoip-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "proxy"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                "download_detour": "proxy"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-bing",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
+                "download_detour": "proxy"
+            }
+        ],
+        "auto_detect_interface": true,
+        "final": "proxy"
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "ui",
+            "external_ui_download_detour": "proxy",
+            "default_mode": "rule"
+        }
+    }
+}
