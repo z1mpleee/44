@@ -83,15 +83,13 @@
             "type": "urltest",
             "tag": "auto",
             "outbounds": [
-                "{Oracle}",
-                "{OuO}"
+                "{Oracle}"
             ]
         },
         {
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "{OuO}",
                 "{Oracle}"
             ]
         },
