@@ -83,14 +83,16 @@
             "type": "urltest",
             "tag": "auto",
             "outbounds": [
-                "{Oracle}"
+                "Oralce",
+                "{OuO}"
             ]
         },
         {
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "{Oracle}"
+                "{OuO}",
+                "Oralce"
             ]
         },
         {
@@ -100,6 +102,17 @@
                 "proxy"
             ],
             "default": "proxy"
+        },
+        {
+            "type": "Oralce",
+            "tag": "sub.bibibi.lat:443",
+            "server": "sub.bibibi.lat",
+            "server_port": 443,
+            "password": "fOPwRESg",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
         }
     ],
     "route": {
