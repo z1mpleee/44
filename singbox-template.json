@@ -83,7 +83,7 @@
             "type": "urltest",
             "tag": "auto",
             "outbounds": [
-                "Oralce",
+                "Oracle",
                 "{OuO}"
             ]
         },
@@ -92,7 +92,7 @@
             "tag": "proxy",
             "outbounds": [
                 "{OuO}",
-                "Oralce"
+                "Oracle"
             ]
         },
         {
@@ -104,8 +104,8 @@
             "default": "proxy"
         },
         {
-            "type": "trojan",
             "tag": "Oracle",
+            "type": "trojan",
             "server": "sub.bibibi.lat",
             "server_port": 443,
             "password": "fOPwRESg",
