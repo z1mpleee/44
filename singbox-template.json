@@ -104,8 +104,8 @@
             "default": "proxy"
         },
         {
-            "type": "Oralce",
-            "tag": "sub.bibibi.lat:443",
+            "type": "trojan",
+            "tag": "Oracle",
             "server": "sub.bibibi.lat",
             "server_port": 443,
             "password": "fOPwRESg",
