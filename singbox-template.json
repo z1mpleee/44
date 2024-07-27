@@ -84,14 +84,14 @@
             "tag": "auto",
             "outbounds": [
                 "Oracle",
-                "{OuO}"
+                "{Dukou}"
             ]
         },
         {
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "{OuO}",
+                "{Dukou}",
                 "Oracle"
             ]
         },
