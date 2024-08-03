@@ -3,7 +3,7 @@
     "lives": [{
             "name": "LIVE",
             "type": 0,
-            "url": "https://fanmingming.com/txt?url=https://raw.githubusercontent.com/ClodQiu/TELEV/Grey/IPTV.m3u",
+            "url": "https://fanmingming.com/txt?url=https://raw.githubusercontent.com/wwb521/live/main/tv.m3u",
                     "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
             "logo": "https://epg.112114.xyz/logo/{name}.png"
         }, {
