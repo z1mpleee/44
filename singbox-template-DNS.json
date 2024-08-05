@@ -91,16 +91,16 @@
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "{Dukou}",
-                "Oracle"
+                "Oracle",
+                "{Dukou}"
             ]
         },
         {
             "type": "selector",
             "tag": "proxy-openai",
             "outbounds": [
-                "{Dukou}",
-                "Oracle"
+                "Oracle",
+                "{Dukou}"
             ]
         },
         {
@@ -151,6 +151,10 @@
                     "geosite-bing"
                 ],
                 "outbound": "direct-out"
+            },
+            {
+                "rule_set": "geosite-openai",
+                "outbound": "proxy-openai"
             }
         ],
         "rule_set": [
