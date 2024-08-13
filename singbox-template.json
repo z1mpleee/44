@@ -112,14 +112,17 @@
             "default": "proxy"
         },
         {
+            "type": "vmess",
             "tag": "Oracle",
-            "type": "trojan",
-            "server": "sub.bibibi.lat",
-            "server_port": 443,
-            "password": "fOPwRESg",
-            "tls": {
-                "enabled": true,
-                "insecure": false
+            "server": "132.145.88.74",
+            "server_port": 54844,
+            "uuid": "613d4fe3-50bb-4f75-e340-1a7da44c7cb6",
+            "alter_id": 0,
+            "security": "auto",
+            "transport": {
+                "type": "ws",
+                "path": "/613d4fe3",
+                "headers": {}
             }
         }
     ],
