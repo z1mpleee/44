@@ -129,9 +129,20 @@
     "route": {
         "rules": [
             {
-                "domain": [
-                    "tplogin.cn",
-                    "miwifi.com"
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "domain": [
+                            "tplogin.cn",
+                            "miwifi.com"
+                        ]
+                    },
+                    {
+                        "port": [
+                            22
+                        ]
+                    }
                 ],
                 "outbound": "direct-out"
             },
