@@ -54,11 +54,12 @@
         {
             "type": "tun",
             "tag": "tun-in",
-            "inet4_address": "172.16.0.1/24",
-            "inet6_address": "fd00::1/64",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
             "mtu": 9000,
+            "gso": false,
             "auto_route": true,
-            "strict_route": true,
+            "strict_route": false,
             "stack": "system",
             "sniff": true,
             "sniff_override_destination": false
