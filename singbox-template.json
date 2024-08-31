@@ -167,7 +167,8 @@
                 "rule_set": [
                     "geoip-cn",
                     "geosite-cn",
-                    "geosite-bing"
+                    "geosite-bing",
+                    "geosite-steam@cn"
                 ],
                 "outbound": "direct-out"
             },
@@ -203,6 +204,13 @@
                 "tag": "geosite-openai",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-steam@cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam@cn.srs",
                 "download_detour": "auto"
             }
         ],
