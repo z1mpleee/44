@@ -165,9 +165,7 @@
                 "rule_set": [
                     "geoip-cn",
                     "geosite-cn",
-                    "geosite-bing",
-                    "geosite-steam",
-                    "geosite-epicgames"
+                    "geosite-bing"
                 ],
                 "outbound": "direct-out"
             },
@@ -203,20 +201,6 @@
                 "tag": "geosite-openai",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-                "download_detour": "auto"
-            },
-            {
-                "type": "remote",
-                "tag": "geosite-steam",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs",
-                "download_detour": "auto"
-            },
-            {
-                "type": "remote",
-                "tag": "geosite-epicgames",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-epicgames.srs",
                 "download_detour": "auto"
             }
         ],
