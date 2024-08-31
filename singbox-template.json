@@ -168,7 +168,8 @@
                     "geoip-cn",
                     "geosite-cn",
                     "geosite-bing",
-                    "geosite-steam@cn"
+                    "geosite-steam@cn",
+                    "geosite-epicgames@cn"
                 ],
                 "outbound": "direct-out"
             },
@@ -211,6 +212,13 @@
                 "tag": "geosite-steam@cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam@cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-epicgames@cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-epicgames@cn.srs",
                 "download_detour": "auto"
             }
         ],
