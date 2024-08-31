@@ -1,2 +1,1 @@
-proxies:
-  - {name: sub.bibibi.lat:443, server: sub.bibibi.lat, port: 443, type: trojan, password: fOPwRESg, udp: true}
+trojan%3A%2F%2FfOPwRESg%40sub.bibibi.lat%3A443
