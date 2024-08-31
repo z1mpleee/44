@@ -144,7 +144,8 @@
                         ]
                     },{
                         "process_name": [
-                            "Thunder.exe"
+                            "Thunder.exe",
+                            "DownloadSDKServer.exe"
                         ]
                     }
                 ],
