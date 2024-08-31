@@ -142,6 +142,10 @@
                         "port": [
                             22
                         ]
+                    },{
+                        "process_name": [
+                            "迅雷"
+                        ]
                     }
                 ],
                 "outbound": "direct-out"
