@@ -166,8 +166,8 @@
                     "geoip-cn",
                     "geosite-cn",
                     "geosite-bing",
-                    "geosite-steam@cn",
-                    "geosite-epicgames@cn"
+                    "geosite-steam",
+                    "geosite-epicgames"
                 ],
                 "outbound": "direct-out"
             },
@@ -207,16 +207,16 @@
             },
             {
                 "type": "remote",
-                "tag": "geosite-steam@cn",
+                "tag": "geosite-steam",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam@cn.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-steam.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
-                "tag": "geosite-epicgames@cn",
+                "tag": "geosite-epicgames",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-epicgames@cn.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-epicgames.srs",
                 "download_detour": "auto"
             }
         ],
