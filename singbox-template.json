@@ -145,6 +145,9 @@
                             "Thunder.exe",
                             "DownloadSDKServer.exe"
                         ]
+                    },
+                    {
+                        "ip_is_private": true
                     }
                 ],
                 "outbound": "direct-out"
