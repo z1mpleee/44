@@ -1,0 +1,1 @@
+curl -o config.json "https://singbox.bibibi.lat/config/https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1%26tag%3DDukou&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json"
