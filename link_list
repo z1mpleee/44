@@ -1,18 +1,18 @@
-clash: https://gh.bibibi.lat/https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash.yml
+clash: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash.yml
 
-clash_DivineEngine.yml: https://gh.bibibi.lat/https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash_DivineEngine.yml
+clash_DivineEngine.yml: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash_DivineEngine.yml
 
-quanx: https://gh.bibibi.lat/https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx.conf
+quanx: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx.conf
 
-quanx_DivineEngine: https://gh.bibibi.lat/https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx_DivineEngine.conf
+quanx_DivineEngine: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx_DivineEngine.conf
 
 node: https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
-      https://gh.bibibi.lat/https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
+      https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
 
-sub: http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
+sub: http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
 
 sing-box-template: https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json
 sing-box-template-DNSv4: https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json
 
-sing-box-sub: https://singbox.bibibi.lat/config/https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1%26tag%3DDukou&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json
-sing-box-DNSv4-sub: https://singbox.bibibi.lat/config/https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1%26tag%3DDukou&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json
+sing-box-sub: https://singbox.bibibi.buzz/config/https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1%26tag%3DDukou&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json
+sing-box-DNSv4-sub: https://singbox.bibibi.buzz/config/https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1%26tag%3DDukou&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json

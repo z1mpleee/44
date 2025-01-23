@@ -114,7 +114,7 @@
         {
             "type": "trojan",
             "tag": "Oracle",
-            "server": "sub.bibibi.lat",
+            "server": "sub.bibibi.buzz",
             "server_port": 443,
             "password": "fOPwRESg",
             "tls": {

@@ -1,2 +1,2 @@
 proxies:
-  - {name: sub.bibibi.lat:443, server: sub.bibibi.lat, port: 443, type: trojan, password: fOPwRESg, udp: true}
+  - {name: sub.bibibi.buzz:443, server: sub.bibibi.buzz, port: 443, type: trojan, password: fOPwRESg, udp: true}
