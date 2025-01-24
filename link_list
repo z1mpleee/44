@@ -1,13 +1,13 @@
-clash: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash.yml
+clash: https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash.yml
 
-clash_DivineEngine.yml: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash_DivineEngine.yml
+clash_DivineEngine.yml: https://raw.githubusercontent.com/z1mpleee/44/ma1n/clash_DivineEngine.yml
 
-quanx: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx.conf
+quanx: https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx.conf
 
-quanx_DivineEngine: https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx_DivineEngine.conf
+quanx_DivineEngine: https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx_DivineEngine.conf
 
 node: https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
-      https://gh.bibibi.buzz/https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
+      https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
 
 sub: http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
 
