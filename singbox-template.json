@@ -85,6 +85,7 @@
             "tag": "auto",
             "outbounds": [
                 "Oracle",
+                "Aliyun",
                 "{Dukou}"
             ]
         },
@@ -93,6 +94,7 @@
             "tag": "proxy",
             "outbounds": [
                 "Oracle",
+                "Aliyun",
                 "{Dukou}"
             ]
         },
@@ -101,6 +103,7 @@
             "tag": "proxy-openai",
             "outbounds": [
                 "Oracle",
+                "Aliyun",
                 "{Dukou}"
             ]
         },
@@ -118,6 +121,17 @@
             "server": "sub.bibibi.buzz",
             "server_port": 443,
             "password": "fOPwRESg",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
+        },
+        {
+            "type": "trojan",
+            "tag": "Aliyun",
+            "server": "lib.bibibi.buzz",
+            "server_port": 443,
+            "password": "408ZQU.com",
             "tls": {
                 "enabled": true,
                 "insecure": false
