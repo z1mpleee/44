@@ -83,7 +83,8 @@
             "type": "urltest",
             "tag": "auto",
             "outbounds": [
-                "Oracle",
+                "Oracle KR",
+                "Aliyun HK",
                 "{Dukou}"
             ]
         },
@@ -91,7 +92,8 @@
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "Oracle",
+                "Oracle KR",
+                "Aliyun HK",
                 "{Dukou}"
             ]
         },
@@ -99,7 +101,8 @@
             "type": "selector",
             "tag": "proxy-openai",
             "outbounds": [
-                "Oracle",
+                "Oracle KR",
+                "Aliyun HK",
                 "{Dukou}"
             ]
         },
@@ -113,10 +116,21 @@
         },
         {
             "type": "trojan",
-            "tag": "Oracle",
+            "tag": "Oracle KR",
             "server": "sub.bibibi.buzz",
             "server_port": 443,
             "password": "fOPwRESg",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
+        },
+        {
+            "type": "trojan",
+            "tag": "Aliyun HK",
+            "server": "lib.bibibi.buzz",
+            "server_port": 443,
+            "password": "408ZQU.com",
             "tls": {
                 "enabled": true,
                 "insecure": false
