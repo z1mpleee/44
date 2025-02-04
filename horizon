@@ -16,29 +16,21 @@
 # }
 # 
 proxies:
-- name: "trojan"
-  type: trojan
-  server: server
+- name: "hysteria2"
+  type: hysteria2
+  server: server.com
   port: 443
-  password: yourpsk
-  udp: true
+  ports: 443-8443
+  password: yourpassword
+  up: "30 Mbps"
+  down: "200 Mbps"
+  obfs: salamander # 默认为空，如果填写则开启obfs，目前仅支持salamander
+  obfs-password: yourpassword
 
-  sni: example.com
-  alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: random
+  sni: server.com
+  skip-cert-verify: false
   fingerprint: xxxx
-  skip-cert-verify: true
-  ss-opts:
-    enabled: false
-    method: aes-128-gcm
-    password: "example"
-  reality-opts:
-    public-key: xxxx
-    short-id: xxxx
-
-  network: tcp
-
-  smux:
-    enabled: false
+  alpn:
+    - h3
+  ca: "./my.ca"
+  ca-str: "xyz"
