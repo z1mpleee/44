@@ -1,20 +1,3 @@
-# proxies:
-#   - {name: 🇰🇷 Oracle KR, server: sub.bibibi.buzz, port: 443, type: trojan, password: fOPwRESg, udp: true}
-#   - {name: 🇨🇳 Aliyun HK, server: lib.bibibi.buzz, port: 443, type: trojan, password: 408ZQU.com, udp: true}
-
-# {
-#     "type": "hysteria2",
-#     "tag": "🇨🇳 Aliyun HK",
-#     "server": "lib.bibibi.buzz",
-#     "server_port": 443,
-#     "password": "408ZQU.com",
-#     "tls": {
-#       "enabled": true,
-#       "server_name": "lib.bibibi.buzz",
-#       "insecure": false
-#     }
-# }
-# 
 proxies:
 - name: "🇨🇳 Aliyun HK"
   type: hysteria2
