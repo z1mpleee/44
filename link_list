@@ -6,8 +6,8 @@ quanx: https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx.conf
 
 quanx_DivineEngine: https://raw.githubusercontent.com/z1mpleee/44/ma1n/quanx_DivineEngine.conf
 
-node: https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
-      https://raw.githubusercontent.com/z1mpleee/44/ma1n/own
+horizon: https://raw.githubusercontent.com/z1mpleee/44/ma1n/horizon
+         https://raw.gitmirror.com/z1mpleee/44/ma1n/horizon
 
 sub: http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
 
