@@ -126,17 +126,16 @@
             }
         },
         {
-            "type": "hysteria2",
+            "type": "trojan",
             "tag": "🇨🇳 Aliyun HK",
             "server": "lib.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
               "enabled": true,
-              "server_name": "lib.bibibi.buzz",
               "insecure": false
             }
-          }
+        }
     ],
     "route": {
         "rules": [
