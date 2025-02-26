@@ -201,11 +201,11 @@ proxy-providers:
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
   
-  list_oracle:
+  list_horizon:
     type: http
-    url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fown"
+    url: "http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fhorizon"
     interval: 86400
-    path: ./Sub/oracle.yaml # 注意此处文件名不可相同
+    path: ./Sub/horizon.yaml # 注意此处文件名不可相同
     health-check:
       enable: false
       interval: 86400
@@ -213,7 +213,7 @@ proxy-providers:
   
   list_dukou:
     type: http
-    url: "http://sub.bibibi.lat:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Ftoolpfan.xyz%2Flink%2FnnFkF69uNUwP4Fca%3Fclash%3D1"
+    url: "http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1"
     interval: 86400
     path: ./Sub/dukou.yaml # 注意此处文件名不可相同
     health-check:
@@ -259,10 +259,10 @@ proxy-groups:
   #   url: 'http://www.gstatic.com/generate_204'
   #   interval: 300
 
-  - name: "Oracle"
+  - name: "Horizon"
     type: select # 亦可使用 fallback 或 load-balance
     use: # 注意此处是「use」
-      - list_oracle # 这是上面「proxy-providers」的名称
+      - list_horizon # 这是上面「proxy-providers」的名称
       
   - name: "Dukou"
     type: select # 亦可使用 fallback 或 load-balance
@@ -273,7 +273,7 @@ proxy-groups:
   - name: "PROXY"
     type: select
     proxies:
-      - Oracle
+      - Horizon
       - Dukou
       
   # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动

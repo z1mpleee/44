@@ -84,7 +84,7 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇨🇳 Aliyun HK",
+                "🇨🇳 ClawCloud HK",
                 "{Dukou}"
             ]
         },
@@ -93,7 +93,7 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇨🇳 Aliyun HK",
+                "🇨🇳 ClawCloud HK",
                 "{Dukou}"
             ]
         },
@@ -102,7 +102,7 @@
             "tag": "proxy-openai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇨🇳 Aliyun HK",
+                "🇨🇳 ClawCloud HK",
                 "{Dukou}"
             ]
         },
@@ -126,10 +126,15 @@
             }
         },
         {
-            "type": "trojan",
-            "tag": "🇨🇳 Aliyun HK",
-            "server": "lib.bibibi.buzz",
-            "server_port": 443,
+            "type": "hysteria2",
+            "tag": "🇨🇳 ClawCloud HK",
+            "server": "claw.bibibi.buzz",
+            "server_ports": [
+              "30000:50000"
+            ],
+            "hop_interval": "30s",
+            "up_mbps": 60,
+            "down_mbps": 300,
             "password": "408ZQU.com",
             "tls": {
               "enabled": true,
