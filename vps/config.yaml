@@ -1,0 +1,31 @@
+listen: :443
+
+acme:
+  domains:
+    - claw.bibibi.buzz
+  email: your@email.com
+  ca: letsencrypt
+
+auth:
+  type: password
+  password: 408ZQU.com
+
+masquerade:
+  type: proxy
+  proxy:
+    url: https://acm.timus.ru/
+    rewriteHost: true
+  listenHTTP: :80 
+  listenHTTPS: :443 
+  forceHTTPS: true
+
+bandwidth:
+  up: 1000 mbps
+  down: 200 mbps
+
+sniff:
+  enable: true 
+  timeout: 2s 
+  rewriteDomain: false 
+  tcpPorts: 80,443
+  udpPorts: 30000-50000
