@@ -216,7 +216,7 @@
             },
             {
                 "type": "remote",
-                "tag": "geosite-anthropic.srs",
+                "tag": "geosite-anthropic",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
                 "download_detour": "auto"
