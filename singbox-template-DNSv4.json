@@ -184,8 +184,12 @@
                 "outbound": "direct-out"
             },
             {
-                "rule_set": "geosite-openai",
-                "outbound": "proxy-openai"
+                "rule_set": [
+                    "geosite-openai",
+                    "geosite-google-gemini",
+                    "geosite-anthropic"
+                ],
+                "outbound": "proxy-ai"
             }
         ],
         "rule_set": [
@@ -215,6 +219,20 @@
                 "tag": "geosite-openai",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-google-gemini",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-anthropic.srs",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
                 "download_detour": "auto"
             }
         ],
