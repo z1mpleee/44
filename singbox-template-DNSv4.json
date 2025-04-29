@@ -84,7 +84,6 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇨🇳 ClawCloud HK",
                 "{Dukou}"
             ]
         },
@@ -93,16 +92,14 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇨🇳 ClawCloud HK",
                 "{Dukou}"
             ]
         },
         {
             "type": "selector",
-            "tag": "proxy-openai",
+            "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇨🇳 ClawCloud HK",
                 "{Dukou}"
             ]
         },
@@ -118,17 +115,6 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.buzz",
-            "server_port": 443,
-            "password": "408ZQU.com",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "🇨🇳 ClawCloud HK",
-            "server": "claw.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
