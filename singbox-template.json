@@ -85,8 +85,8 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 JMS US",
-                "🇯🇵 JMS JP",
+                "🇺🇸 JustMySocks US",
+                "🇯🇵 JustMySocks JP",
                 "{Dukou}"
             ]
         },
@@ -95,8 +95,8 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 JMS US",
-                "🇯🇵 JMS JP",
+                "🇺🇸 JustMySocks US",
+                "🇯🇵 JustMySocks JP",
                 "{Dukou}"
             ]
         },
@@ -105,8 +105,8 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 JMS US",
-                "🇯🇵 JMS JP",
+                "🇺🇸 JustMySocks US",
+                "🇯🇵 JustMySocks JP",
                 "{Dukou}"
             ]
         },
@@ -131,7 +131,7 @@
         },
         {
             "type": "vmess",
-            "tag": "🇺🇸 JMS US",
+            "tag": "🇺🇸 JustMySocks US",
             "server": "c12s3.portablesubmarines.com",
             "server_port": 8151,
             "uuid": "4a76e732-4904-4d8f-bab0-3d6b649bb20c",
@@ -147,7 +147,7 @@
         },
         {
             "type": "vmess",
-            "tag": "🇯🇵 JMS JP",
+            "tag": "🇯🇵 JustMySocks JP",
             "server": "c12s4.portablesubmarines.com",
             "server_port": 8151,
             "uuid": "4a76e732-4904-4d8f-bab0-3d6b649bb20c",
