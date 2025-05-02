@@ -86,6 +86,7 @@
             "outbounds": [
                 "🇰🇷 Oracle KR",
                 "🇺🇸 JMS US",
+                "🇯🇵 JMS JP",
                 "{Dukou}"
             ]
         },
@@ -95,6 +96,7 @@
             "outbounds": [
                 "🇰🇷 Oracle KR",
                 "🇺🇸 JMS US",
+                "🇯🇵 JMS JP",
                 "{Dukou}"
             ]
         },
@@ -104,6 +106,7 @@
             "outbounds": [
                 "🇰🇷 Oracle KR",
                 "🇺🇸 JMS US",
+                "🇯🇵 JMS JP",
                 "{Dukou}"
             ]
         },
@@ -130,6 +133,23 @@
             "type": "vmess",
             "tag": "🇺🇸 JMS US",
             "server": "c12s3.portablesubmarines.com",
+            "server_port": 8151,
+            "uuid": "4a76e732-4904-4d8f-bab0-3d6b649bb20c",
+            "security": "auto",
+            "alter_id": 0,
+            "global_padding": false,
+            "authenticated_length": true,
+            "network": "tcp",
+            "packet_encoding": "",
+            "tls": {
+                "enabled": false
+            }
+        }
+        ,
+        {
+            "type": "vmess",
+            "tag": "🇯🇵 JMS JP",
+            "server": "c12s4.portablesubmarines.com",
             "server_port": 8151,
             "uuid": "4a76e732-4904-4d8f-bab0-3d6b649bb20c",
             "security": "auto",
