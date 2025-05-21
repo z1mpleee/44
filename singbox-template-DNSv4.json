@@ -85,7 +85,6 @@
             "outbounds": [
                 "🇰🇷 Oracle KR",
                 "🇺🇸 RackNerd US",
-                "🇭🇰 DogYun HK",
                 "{Dukou}"
             ]
         },
@@ -95,7 +94,6 @@
             "outbounds": [
                 "🇰🇷 Oracle KR",
                 "🇺🇸 RackNerd US",
-                "🇭🇰 DogYun HK",
                 "{Dukou}"
             ]
         },
@@ -105,7 +103,6 @@
             "outbounds": [
                 "🇰🇷 Oracle KR",
                 "🇺🇸 RackNerd US",
-                "🇭🇰 DogYun HK",
                 "{Dukou}"
             ]
         },
@@ -132,17 +129,6 @@
             "type": "trojan",
             "tag": "🇺🇸 RackNerd US",
             "server": "rn.bibibi.buzz",
-            "server_port": 443,
-            "password": "408ZQU.com",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "🇭🇰 DogYun HK",
-            "server": "dog.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
