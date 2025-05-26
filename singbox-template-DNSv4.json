@@ -84,8 +84,7 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 RackNerd US",
-                "{Dukou}"
+                "{Ytoo}"
             ]
         },
         {
@@ -93,8 +92,7 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 RackNerd US",
-                "{Dukou}"
+                "{Ytoo}"
             ]
         },
         {
@@ -102,8 +100,7 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 RackNerd US",
-                "{Dukou}"
+                "{Ytoo}"
             ]
         },
         {
@@ -118,17 +115,6 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.buzz",
-            "server_port": 443,
-            "password": "408ZQU.com",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "🇺🇸 RackNerd US",
-            "server": "rn.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
