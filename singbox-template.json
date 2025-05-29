@@ -85,6 +85,7 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇭🇰 Wanwei HK",
                 "{Ytoo}"
             ]
         },
@@ -93,6 +94,7 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇭🇰 Wanwei HK",
                 "{Ytoo}"
             ]
         },
@@ -101,6 +103,7 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇭🇰 Wanwei HK",
                 "{Ytoo}"
             ]
         },
@@ -116,6 +119,17 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.buzz",
+            "server_port": 443,
+            "password": "408ZQU.com",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
+        },
+        {
+            "type": "trojan",
+            "tag": "🇭🇰 Wanwei HK",
+            "server": "wwdx.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
