@@ -1,1 +1,1 @@
-curl -o config.json "https://singbox.bibibi.buzz/config/https:/api.sublink.dev/sub?target=clash&emoji=true&udp=false&list=true&url=https%3A%2F%2Fapi.oxycontinon.com%2Fosubscribe.php%3Fsid%3D101471%26token%3D0YKumnkNq045%26sip002%3D1&tag=Ytoo&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json"
+curl -o config.json "https://singbox.bibibi.buzz/config/https%3A%2F%2Ftoolpfan.xyz%2Flink%2FkfS1szqupCtR55k6%3Fclash%3D1%26tag%3DDukou&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json"
