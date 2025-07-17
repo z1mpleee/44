@@ -84,6 +84,7 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇭🇰 Evoxt HK",
                 "{Dukou}"
             ]
         },
@@ -92,6 +93,7 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇭🇰 Evoxt HK",
                 "{Dukou}"
             ]
         },
@@ -100,6 +102,7 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇭🇰 Evoxt HK",
                 "{Dukou}"
             ]
         },
@@ -115,6 +118,17 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.buzz",
+            "server_port": 443,
+            "password": "408ZQU.com",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
+        },
+        {
+            "type": "trojan",
+            "tag": "🇭🇰 Evoxt HK",
+            "server": "evoxt.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
