@@ -85,7 +85,7 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇳🇱 V.PS NZ",
+                "🇳🇱 V.PS NL",
                 "{Dukou}"
             ]
         },
@@ -94,7 +94,7 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇳🇱 V.PS NZ",
+                "🇳🇱 V.PS NL",
                 "{Dukou}"
             ]
         },
@@ -103,7 +103,7 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇳🇱 V.PS NZ",
+                "🇳🇱 V.PS NL",
                 "{Dukou}"
             ]
         },
@@ -128,7 +128,7 @@
         },
         {
             "type": "trojan",
-            "tag": "🇳🇱 V.PS NZ",
+            "tag": "🇳🇱 V.PS NL",
             "server": "vps.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
