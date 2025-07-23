@@ -1,1 +1,1 @@
-curl -o config.json "https://singbox.bibibi.buzz/config/https%3A%2Fsub.besttelecom.cc%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dba71ea94fcc360a2813839e87ee81f97%26tag%3DBestTelecom%26file%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json
+curl -o config.json "https://singbox.bibibi.buzz/config/https%3A%2Fsub.besttelecom.cc%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dba71ea94fcc360a2813839e87ee81f97%26tag%3DBestTelecom%26file%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json"
