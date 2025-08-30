@@ -58,8 +58,7 @@
     "outbounds": [
         {
             "type": "direct",
-            "tag": "direct-out",
-            "routing_mark": 100
+            "tag": "direct-out"
         },
         {
             "type": "block",
