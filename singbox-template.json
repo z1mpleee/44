@@ -7,27 +7,18 @@
         "servers": [
             {
                 "tag": "default-dns",
-                "address": "dhcp://auto",
+                "type": "dhcp",
                 "detour": "direct-out"
             },
             {
-                "tag": "block-dns",
-                "address": "rcode://name_error"
-            },
-            {
                 "tag": "proxy-dns",
-                "address": "https://1.1.1.1/dns-query",
-                "address_resolver": "default-dns",
-                "address_strategy": "prefer_ipv4",
-                "strategy": "ipv4_only",
-                "client_subnet": "202.96.128.86"
+                "type": "https",
+                "server": "1.1.1.1",
+                "path": "/dns-query",
+                "detour": "proxy"
             }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "default-dns"
-            },
             {
                 "clash_mode": "direct",
                 "server": "default-dns"
@@ -38,13 +29,13 @@
             },
             {
                 "rule_set": [
-                    "geosite-cn",
-                    "geosite-bing"
+                    "geosite-cn"
                 ],
                 "server": "default-dns"
             }
         ],
         "strategy": "prefer_ipv4",
+        "client_subnet": "202.96.128.0/22",
         "disable_cache": false,
         "disable_expire": false,
         "independent_cache": false,
@@ -62,7 +53,6 @@
             "auto_route": true,
             "strict_route": false,
             "stack": "system",
-            "sniff": true,
             "sniff_override_destination": false
         }
     ],
@@ -75,10 +65,6 @@
         {
             "type": "block",
             "tag": "block-out"
-        },
-        {
-            "type": "dns",
-            "tag": "dns-out"
         },
         {
             "type": "urltest",
@@ -153,7 +139,17 @@
         }
     ],
     "route": {
+        "default_domain_resolver": {
+            "server": "default-dns"
+        },
         "rules": [
+            {
+                "action": "sniff"
+            },
+            {
+                "protocol": "dns",
+                "action": "hijack-dns"
+            },
             {
                 "type": "logical",
                 "mode": "or",
@@ -179,10 +175,6 @@
                 "outbound": "direct-out"
             },
             {
-                "protocol": "dns",
-                "outbound": "dns-out"
-            },
-            {
                 "clash_mode": "direct",
                 "outbound": "direct-out"
             },
@@ -193,8 +185,7 @@
             {
                 "rule_set": [
                     "geoip-cn",
-                    "geosite-cn",
-                    "geosite-bing"
+                    "geosite-cn"
                 ],
                 "outbound": "direct-out"
             },
@@ -212,42 +203,35 @@
                 "type": "remote",
                 "tag": "geoip-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                "download_detour": "auto"
-            },
-            {
-                "type": "remote",
-                "tag": "geosite-bing",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/cn.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-google-gemini",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google-gemini.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-anthropic",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/anthropic.srs",
                 "download_detour": "auto"
             }
         ],
