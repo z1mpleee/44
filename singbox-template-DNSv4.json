@@ -154,12 +154,6 @@
                 "mode": "or",
                 "rules": [
                     {
-                        "domain": [
-                            "tplogin.cn",
-                            "miwifi.com"
-                        ]
-                    },
-                    {
                         "port": [
                             22
                         ]
@@ -183,9 +177,11 @@
             },
             {
                 "rule_set": [
-                    "geoip-cn",
-                    "geosite-cn",
-                    "geosite-bing@cn"
+                    "MetaCubeX-geosite-cn",
+                    "SagerNet-geosite-cn",
+                    "MetaCubeX-geoip-cn",
+                    "SagerNet-geoip-cn",
+                    "geosite-bing"
                 ],
                 "outbound": "direct-out"
             },
@@ -201,44 +197,65 @@
         "rule_set": [
             {
                 "type": "remote",
-                "tag": "geoip-cn",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
-                "download_detour": "auto"
-            },
-            {
-                "type": "remote",
-                "tag": "geosite-cn",
+                "tag": "MetaCubeX-geosite-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/cn.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
-                "tag": "geosite-bing@cn",
+                "tag": "SagerNet-geosite-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "MetaCubeX-geoip-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "SagerNet-geoip-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-private",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-bing",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-google-gemini",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google-gemini.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
                 "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-anthropic",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/anthropic.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
                 "download_detour": "auto"
             }
         ],
