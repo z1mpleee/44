@@ -29,7 +29,8 @@
             },
             {
                 "rule_set": [
-                    "geosite-cn",
+                    "MetaCubeX-geosite-cn",
+                    "SagerNet-geosite-cn",
                     "geosite-bing@cn"
                 ],
                 "server": "default-dns"
