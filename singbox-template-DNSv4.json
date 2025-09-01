@@ -29,7 +29,8 @@
             },
             {
                 "rule_set": [
-                    "geosite-cn"
+                    "geosite-cn",
+                    "geosite-bing@cn"
                 ],
                 "server": "default-dns"
             }
@@ -183,7 +184,8 @@
             {
                 "rule_set": [
                     "geoip-cn",
-                    "geosite-cn"
+                    "geosite-cn",
+                    "geosite-bing@cn"
                 ],
                 "outbound": "direct-out"
             },
@@ -209,6 +211,13 @@
                 "tag": "geosite-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-bing@cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing@cn.srs",
                 "download_detour": "auto"
             },
             {
