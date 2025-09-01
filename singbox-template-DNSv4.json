@@ -217,7 +217,7 @@
                 "type": "remote",
                 "tag": "geosite-bing@cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing@cn.srs",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
                 "download_detour": "auto"
             },
             {
