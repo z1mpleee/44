@@ -72,9 +72,8 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 ByteVirt US",
                 "🇳🇱 V.PS NL",
-                "{BestTelecom}"
+                "{OuO}"
             ]
         },
         {
@@ -82,9 +81,8 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 ByteVirt US",
                 "🇳🇱 V.PS NL",
-                "{BestTelecom}"
+                "{OuO}"
             ]
         },
         {
@@ -92,9 +90,8 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇺🇸 ByteVirt US",
                 "🇳🇱 V.PS NL",
-                "{BestTelecom}"
+                "{OuO}"
             ]
         },
         {
@@ -109,17 +106,6 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.buzz",
-            "server_port": 443,
-            "password": "408ZQU.com",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "🇺🇸 ByteVirt US",
-            "server": "byte.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {

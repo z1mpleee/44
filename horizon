@@ -1,4 +1,3 @@
 proxies:
   - {name: 🇰🇷 Oracle KR, server: sub.bibibi.buzz, port: 443, type: trojan, password: 408ZQU.com, udp: true}
-  - {name: 🇺🇸 ByteVirt us, server: byte.bibibi.buzz, port: 443, type: trojan, password: 408ZQU.com, udp: true}
   - {name: 🇳🇱 V.PS NL, server: vps.bibibi.buzz, port: 443, type: trojan, password: 408ZQU.com, udp: true}
