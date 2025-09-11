@@ -31,7 +31,7 @@
                 "rule_set": [
                     "MetaCubeX-geosite-cn",
                     "SagerNet-geosite-cn",
-                    "geosite-bing@cn"
+                    "geosite-bing"
                 ],
                 "server": "default-dns"
             }
