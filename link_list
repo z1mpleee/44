@@ -23,10 +23,10 @@ sing-box-DNSv4-sub-dukou:
 
 sing-box-sub-OuO:
   https://singbox.bibibi.buzz/config/http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fpush.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff&tag=OuO&file=https://raw.githubusercontent.com/z1mpleee/44/ma1n/singbox-template.json
-  https://singbox.bibibi.buzz/config/http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fpush.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff&tag=OuO%26file%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json
+  https://singbox.bibibi.buzz/config/http%3A%2F%2Fsub.bibibi.buzz%3A25500%2Fsub%3Ftarget%3Dclash%26add_emoji%3Dtrue%26udp%3Dtrue%26list%3Dtrue%26url%3Dhttps%253A%252F%252Fpush.cauenvao.click%252Fapi%252Fv1%252Fclient%252Fsubscribe%253Ftoken%253D32961d180f39cc9d79d8b2478125a2ff%26tag%3DOuO&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json
 sing-box-DNSv4-sub-OuO:
   https://singbox.bibibi.buzz/config/http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fpush.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff&tag=OuO&file=https://raw.githubusercontent.com/z1mpleee/44/ma1n/singbox-template-DNSv4.json
-  https://singbox.bibibi.buzz/config/http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fpush.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff&tag=OuO%26file%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json
+  https://singbox.bibibi.buzz/config/http%3A%2F%2Fsub.bibibi.buzz%3A25500%2Fsub%3Ftarget%3Dclash%26add_emoji%3Dtrue%26udp%3Dtrue%26list%3Dtrue%26url%3Dhttps%253A%252F%252Fpush.cauenvao.click%252Fapi%252Fv1%252Fclient%252Fsubscribe%253Ftoken%253D32961d180f39cc9d79d8b2478125a2ff%26tag%3DOuO&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json
 
 shadowrocket: https://raw.githubusercontent.com/z1mpleee/44/refs/heads/ma1n/shadowrocket.conf
               https://raw.gitmirror.com/z1mpleee/44/refs/heads/ma1n/shadowrocket.conf
