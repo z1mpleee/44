@@ -1,0 +1,198 @@
+port: 7890 # HTTP(S) 代理服务器端口
+log-level: info # 日志等级 silent/error/warning/info/debug
+ipv6: true # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+mode: rule
+
+allow-lan: false # 允许局域网连接
+bind-address: "*" # 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
+authentication: # http,socks 入口的验证用户名，密码
+  - "username:password"
+skip-auth-prefixes: # 设置跳过验证的 IP 段
+  - 127.0.0.1/8
+  - ::1/128
+lan-allowed-ips: # 允许连接的 IP 地址段，仅作用于 allow-lan 为 true, 默认值为 0.0.0.0/0 和::/0
+  - 0.0.0.0/0
+  - ::/0
+lan-disallowed-ips: # 禁止连接的 IP 地址段，黑名单优先级高于白名单，默认值为空
+
+#  find-process-mode has 3 values:always, strict, off
+#  - always, 开启，强制匹配所有进程
+#  - strict, 默认，由 mihomo 判断是否开启
+#  - off, 不匹配进程，推荐在路由器上使用此模式
+find-process-mode: strict
+
+#自定义 geodata url
+geox-url:
+  geoip: "https://hub.gitmirror.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/release/geoip.dat"
+  geosite: "https://hub.gitmirror.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/release/geosite.dat"
+  mmdb: "https://hub.gitmirror.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/release/geoip.metadb"
+geo-auto-update: true # 是否自动更新 geodata
+geo-update-interval: 24 # 更新间隔，单位：小时
+
+# 类似于 /etc/hosts, 仅支持配置单个 IP
+hosts:
+# '*.mihomo.dev': 127.0.0.1
+# '.dev': 127.0.0.1
+# 'alpha.mihomo.dev': '::1'
+# test.com: [1.1.1.1, 2.2.2.2]
+# home.lan: lan # lan 为特别字段，将加入本地所有网卡的地址
+# baidu.com: google.com # 只允许配置一个别名
+
+profile: 
+  # 存储 select 选择记录
+  store-selected: true
+  # 持久化 fake-ip
+  store-fake-ip: false
+
+# Tun 配置
+tun:
+  enable: false
+
+# 嗅探域名
+sniffer:
+  enable: false
+
+# DNS 配置
+dns:
+  enable: false # 关闭将使用系统 DNS
+
+proxies:
+
+proxy-groups:
+  # - name: "Horizon"
+  #   type: select # 亦可使用 fallback 或 load-balance
+  #   use: # 注意此处是「use」
+  #     - list-horizon # 这是上面「proxy-providers」的名称
+      
+  # - name: "OuO"
+  #   type: select # 亦可使用 fallback 或 load-balance
+  #   use: # 注意此处是「use」
+  #     - list-ouo # 这是上面「proxy-providers」的名称
+
+  # 代理节点选择
+  - name: "PROXY"
+    type: select
+    use: # 注意此处是「use」
+      - list-horizon
+      - list-ouo
+
+  # AI 代理节点选择
+  - name: "PROXY-AI"
+    type: select
+    use: # 注意此处是「use」
+      - list-horizon
+      - list-ouo
+      
+  # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
+  - name: "MATCH"
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+
+# Mihomo 格式的节点或支持 *ray 的分享格式
+proxy-providers:
+  list-horizon:
+    type: http
+    url: "http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fhorizon"
+    interval: 86400
+    path: ./Sub/horizon.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: false
+      interval: 86400
+      url: http://www.gstatic.com/generate_204
+  
+  list-ouo:
+    type: http
+    url: "http://sub.bibibi.buzz:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=https%3A%2F%2Foss8.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff"
+    interval: 86400
+    path: ./Sub/ouo.yaml # 注意此处文件名不可相同
+    health-check:
+      enable: false
+      interval: 86400
+      url: http://www.gstatic.com/generate_204
+
+rule-providers:
+  geoip-cn:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/cn.yaml"
+    path: ./ruleset/geoip-cn.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geosite-cn:
+    type: http
+    behavior: domain
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/cn.yaml"
+    path: ./ruleset/geosite-cn.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geoip-private:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.yaml"
+    path: ./ruleset/geoip-private.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geosite-private:
+    type: http
+    behavior: domain
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/private.yaml"
+    path: ./ruleset/geosite-private.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geosite-bing:
+    type: http
+    behavior: domain
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/bing.yaml"
+    path: ./ruleset/geosite-bing.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geosite-apple:
+    type: http
+    behavior: domain
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geosite/apple.yaml"
+    path: ./ruleset/geosite-apple.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geosite-openai:
+    type: http
+    behavior: domain
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo-lite/geosite/openai.yaml"
+    path: ./ruleset/geosite-openai.yaml
+    interval: 86400
+    proxy: DIRECT
+
+  geosite-google-gemini:
+    type: http
+    behavior: domain
+    url: "https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/google-gemini.yaml"
+    path: ./ruleset/geosite-google-gemini.yaml
+    interval: 86400
+    proxy: DIRECT
+
+rules:
+  # domain
+  - RULE-SET, geosite-private, DIRECT
+  - RULE-SET, geosite-cn, DIRECT
+  - RULE-SET, geosite-bing, DIRECT
+  - RULE-SET, geosite-apple, DIRECT
+  - SUB-RULE, (OR, ((RULE-SET, geosite-openai), (RULE-SET, geosite-google-gemini))), sub-rule-ai
+  
+  # ipcidr
+  - RULE-SET, geoip-private, DIRECT
+  - RULE-SET, geoip-cn, DIRECT
+
+  # final
+  - MATCH, MATCH
+
+sub-rules:
+  sub-rule-ai:
+    - RULE-SET, geosite-openai, PROXY-AI
+    - RULE-SET, geosite-google-gemini, PROXY-AI
