@@ -113,6 +113,13 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
 
 rule-providers:
+  applications:
+    type: http
+    behavior: classical
+    url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
   geoip-cn:
     type: http
     behavior: ipcidr
@@ -178,6 +185,9 @@ rule-providers:
     proxy: DIRECT
 
 rules:
+  # application
+  - RULE-SET, applications, DIRECT
+  
   # domain
   - RULE-SET, geosite-private, DIRECT
   - RULE-SET, geosite-cn, DIRECT
