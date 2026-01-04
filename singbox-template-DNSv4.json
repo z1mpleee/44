@@ -70,7 +70,6 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇳🇱 V.PS NL",
                 "{OuO}"
             ]
         },
@@ -79,7 +78,6 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇳🇱 V.PS NL",
                 "{OuO}"
             ]
         },
@@ -88,7 +86,6 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
-                "🇳🇱 V.PS NL",
                 "{OuO}"
             ]
         },
@@ -104,17 +101,6 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.buzz",
-            "server_port": 443,
-            "password": "408ZQU.com",
-            "tls": {
-                "enabled": true,
-                "insecure": false
-            }
-        },
-        {
-            "type": "trojan",
-            "tag": "🇳🇱 V.PS NL",
-            "server": "vps.bibibi.buzz",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
