@@ -7,27 +7,17 @@
         "servers": [
             {
                 "tag": "default-dns",
-                "address": "dhcp://auto",
-                "detour": "direct-out"
-            },
-            {
-                "tag": "block-dns",
-                "address": "rcode://name_error"
+                "type": "dhcp"
             },
             {
                 "tag": "proxy-dns",
-                "address": "https://1.1.1.1/dns-query",
-                "address_resolver": "default-dns",
-                "address_strategy": "prefer_ipv4",
-                "strategy": "ipv4_only",
-                "client_subnet": "202.96.128.86"
+                "type": "https",
+                "server": "1.1.1.1",
+                "path": "/dns-query",
+                "detour": "proxy"
             }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "default-dns"
-            },
             {
                 "clash_mode": "direct",
                 "server": "default-dns"
@@ -38,13 +28,15 @@
             },
             {
                 "rule_set": [
-                    "geosite-cn",
+                    "MetaCubeX-geosite-cn",
+                    "SagerNet-geosite-cn",
                     "geosite-bing"
                 ],
                 "server": "default-dns"
             }
         ],
-        "strategy": "prefer_ipv4",
+        "strategy": "ipv4_only",
+        "client_subnet": "202.96.128.0/22",
         "disable_cache": false,
         "disable_expire": false,
         "independent_cache": false,
@@ -54,38 +46,138 @@
         {
             "type": "tun",
             "tag": "tun-in",
-            "inet4_address": "172.19.0.1/30",
-            "inet6_address": "fdfe:dcba:9876::1/126",
+            "address": [
+                "172.19.0.1/30"
+            ],
             "mtu": 9000,
-            "gso": true,
             "auto_route": true,
-            "strict_route": true,
+            "strict_route": false,
             "stack": "system",
-            "sniff": true,
             "sniff_override_destination": false
         }
     ],
     "outbounds": [
         {
             "type": "direct",
-            "tag": "direct-out",
-            "routing_mark": 100
+            "tag": "direct-out"
         },
         {
             "type": "block",
             "tag": "block-out"
         },
         {
-            "type": "dns",
-            "tag": "dns-out"
+            "type": "urltest",
+            "tag": "auto",
+            "outbounds": [
+                "🇰🇷 Oracle KR",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 01",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 02",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 03",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 04",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 05",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 01",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 02",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 03",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 04",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 05",
+                "\ud83c\uddf8\ud83c\uddec Singapore 01",
+                "\ud83c\uddf8\ud83c\uddec Singapore 02",
+                "\ud83c\uddf8\ud83c\uddec Singapore 03",
+                "\ud83c\uddf8\ud83c\uddec Singapore 04",
+                "\ud83c\uddf8\ud83c\uddec Singapore 05",
+                "\ud83c\uddef\ud83c\uddf5 Japan 01",
+                "\ud83c\uddef\ud83c\uddf5 Japan 02",
+                "\ud83c\uddef\ud83c\uddf5 Japan 03",
+                "\ud83c\uddef\ud83c\uddf5 Japan 04",
+                "\ud83c\uddef\ud83c\uddf5 Japan 05",
+                "\ud83c\uddfa\ud83c\uddf8 United States 01",
+                "\ud83c\uddfa\ud83c\uddf8 United States 02",
+                "\ud83c\uddfa\ud83c\uddf8 United States 03",
+                "\ud83c\uddfa\ud83c\uddf8 United States 04",
+                "\ud83c\uddfa\ud83c\uddf8 United States 05",
+                "\ud83c\udde9\ud83c\uddea Germany 01",
+                "\ud83c\uddec\ud83c\udde7 Britain 01",
+                "\ud83c\uddec\ud83c\udde7 Britain 02",
+                "\ud83c\udde6\ud83c\uddf7 Argentina 01",
+                "\ud83c\uddf9\ud83c\uddf7 Turkey 01",
+                "\ud83c\uddee\ud83c\uddf3 India 01"
+            ]
         },
         {
             "type": "selector",
             "tag": "proxy",
             "outbounds": [
-                "hk"
-            ],
-            "default": "hk"
+                "🇰🇷 Oracle KR",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 01",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 02",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 03",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 04",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 05",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 01",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 02",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 03",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 04",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 05",
+                "\ud83c\uddf8\ud83c\uddec Singapore 01",
+                "\ud83c\uddf8\ud83c\uddec Singapore 02",
+                "\ud83c\uddf8\ud83c\uddec Singapore 03",
+                "\ud83c\uddf8\ud83c\uddec Singapore 04",
+                "\ud83c\uddf8\ud83c\uddec Singapore 05",
+                "\ud83c\uddef\ud83c\uddf5 Japan 01",
+                "\ud83c\uddef\ud83c\uddf5 Japan 02",
+                "\ud83c\uddef\ud83c\uddf5 Japan 03",
+                "\ud83c\uddef\ud83c\uddf5 Japan 04",
+                "\ud83c\uddef\ud83c\uddf5 Japan 05",
+                "\ud83c\uddfa\ud83c\uddf8 United States 01",
+                "\ud83c\uddfa\ud83c\uddf8 United States 02",
+                "\ud83c\uddfa\ud83c\uddf8 United States 03",
+                "\ud83c\uddfa\ud83c\uddf8 United States 04",
+                "\ud83c\uddfa\ud83c\uddf8 United States 05",
+                "\ud83c\udde9\ud83c\uddea Germany 01",
+                "\ud83c\uddec\ud83c\udde7 Britain 01",
+                "\ud83c\uddec\ud83c\udde7 Britain 02",
+                "\ud83c\udde6\ud83c\uddf7 Argentina 01",
+                "\ud83c\uddf9\ud83c\uddf7 Turkey 01",
+                "\ud83c\uddee\ud83c\uddf3 India 01"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "proxy-ai",
+            "outbounds": [
+                "🇰🇷 Oracle KR",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 01",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 02",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 03",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 04",
+                "\ud83c\udded\ud83c\uddf0 Hong Kong 05",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 01",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 02",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 03",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 04",
+                "\ud83c\uddf9\ud83c\uddfc Taiwan 05",
+                "\ud83c\uddf8\ud83c\uddec Singapore 01",
+                "\ud83c\uddf8\ud83c\uddec Singapore 02",
+                "\ud83c\uddf8\ud83c\uddec Singapore 03",
+                "\ud83c\uddf8\ud83c\uddec Singapore 04",
+                "\ud83c\uddf8\ud83c\uddec Singapore 05",
+                "\ud83c\uddef\ud83c\uddf5 Japan 01",
+                "\ud83c\uddef\ud83c\uddf5 Japan 02",
+                "\ud83c\uddef\ud83c\uddf5 Japan 03",
+                "\ud83c\uddef\ud83c\uddf5 Japan 04",
+                "\ud83c\uddef\ud83c\uddf5 Japan 05",
+                "\ud83c\uddfa\ud83c\uddf8 United States 01",
+                "\ud83c\uddfa\ud83c\uddf8 United States 02",
+                "\ud83c\uddfa\ud83c\uddf8 United States 03",
+                "\ud83c\uddfa\ud83c\uddf8 United States 04",
+                "\ud83c\uddfa\ud83c\uddf8 United States 05",
+                "\ud83c\udde9\ud83c\uddea Germany 01",
+                "\ud83c\uddec\ud83c\udde7 Britain 01",
+                "\ud83c\uddec\ud83c\udde7 Britain 02",
+                "\ud83c\udde6\ud83c\uddf7 Argentina 01",
+                "\ud83c\uddf9\ud83c\uddf7 Turkey 01",
+                "\ud83c\uddee\ud83c\uddf3 India 01"
+            ]
         },
         {
             "type": "selector",
@@ -96,26 +188,294 @@
             "default": "proxy"
         },
         {
+            "type": "trojan",
+            "tag": "🇰🇷 Oracle KR",
+            "server": "sub.bibibi.buzz",
+            "server_port": 443,
+            "password": "408ZQU.com",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
+        },
+                {
+            "tag": "\ud83c\udded\ud83c\uddf0 Hong Kong 01",
             "type": "shadowsocks",
-            "tag": "hk",
-            "server": "acd2e55a7c28a486.cdn.jiashule.com",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48778,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\udded\ud83c\uddf0 Hong Kong 02",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48777,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\udded\ud83c\uddf0 Hong Kong 03",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48775,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\udded\ud83c\uddf0 Hong Kong 04",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
             "server_port": 48776,
             "method": "aes-128-gcm",
-            "password": "ea352c13-7671-4ff5-be73-08588066bc9f"
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\udded\ud83c\uddf0 Hong Kong 05",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48779,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf9\ud83c\uddfc Taiwan 01",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48595,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf9\ud83c\uddfc Taiwan 02",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48596,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf9\ud83c\uddfc Taiwan 03",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48597,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf9\ud83c\uddfc Taiwan 04",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48598,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf9\ud83c\uddfc Taiwan 05",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 48599,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf8\ud83c\uddec Singapore 01",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 20913,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf8\ud83c\uddec Singapore 02",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 20909,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf8\ud83c\uddec Singapore 03",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 20910,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf8\ud83c\uddec Singapore 04",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 20911,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf8\ud83c\uddec Singapore 05",
+            "type": "shadowsocks",
+            "server": "u9bwd-n0j6p8.s1-9ma2c.gov-oss.cn",
+            "server_port": 20912,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddef\ud83c\uddf5 Japan 01",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35000,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddef\ud83c\uddf5 Japan 02",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 38000,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddef\ud83c\uddf5 Japan 03",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35004,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddef\ud83c\uddf5 Japan 04",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35006,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddef\ud83c\uddf5 Japan 05",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35007,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddfa\ud83c\uddf8 United States 01",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35027,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddfa\ud83c\uddf8 United States 02",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 34010,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddfa\ud83c\uddf8 United States 03",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35016,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddfa\ud83c\uddf8 United States 04",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35018,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddfa\ud83c\uddf8 United States 05",
+            "type": "shadowsocks",
+            "server": "p9c2a-c7c30c.e1-0xda2.gov-oss.cn",
+            "server_port": 35015,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\udde9\ud83c\uddea Germany 01",
+            "type": "shadowsocks",
+            "server": "5f0qwc-lle80cd.n1-iv5gd.gov-oss.cn",
+            "server_port": 38305,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddec\ud83c\udde7 Britain 01",
+            "type": "shadowsocks",
+            "server": "5f0qwc-lle80cd.n1-iv5gd.gov-oss.cn",
+            "server_port": 22398,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddec\ud83c\udde7 Britain 02",
+            "type": "shadowsocks",
+            "server": "5f0qwc-lle80cd.n1-iv5gd.gov-oss.cn",
+            "server_port": 25520,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\udde6\ud83c\uddf7 Argentina 01",
+            "type": "shadowsocks",
+            "server": "5f0qwc-lle80cd.n1-iv5gd.gov-oss.cn",
+            "server_port": 35011,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddf9\ud83c\uddf7 Turkey 01",
+            "type": "shadowsocks",
+            "server": "5f0qwc-lle80cd.n1-iv5gd.gov-oss.cn",
+            "server_port": 33697,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
+        },
+        {
+            "tag": "\ud83c\uddee\ud83c\uddf3 India 01",
+            "type": "shadowsocks",
+            "server": "5f0qwc-lle80cd.n1-iv5gd.gov-oss.cn",
+            "server_port": 33690,
+            "method": "aes-128-gcm",
+            "password": "a4fa5272-cb10-4863-9dec-f6cca56e829f"
         }
     ],
     "route": {
+        "default_domain_resolver": {
+            "server": "default-dns"
+        },
         "rules": [
             {
-                "domain": [
-                    "tplogin.cn",
-                    "miwifi.com"
-                ],
-                "outbound": "direct-out"
+                "action": "sniff"
             },
             {
                 "protocol": "dns",
-                "outbound": "dns-out"
+                "action": "hijack-dns"
+            },
+            {
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "port": [
+                            22
+                        ]
+                    },
+                    {
+                        "process_name": [
+                            "Thunder.exe",
+                            "DownloadSDKServer.exe"
+                        ]
+                    }
+                ],
+                "outbound": "direct-out"
             },
             {
                 "clash_mode": "direct",
@@ -127,34 +487,86 @@
             },
             {
                 "rule_set": [
-                    "geoip-cn",
-                    "geosite-cn",
+                    "MetaCubeX-geosite-cn",
+                    "SagerNet-geosite-cn",
+                    "MetaCubeX-geoip-cn",
+                    "SagerNet-geoip-cn",
                     "geosite-bing"
                 ],
                 "outbound": "direct-out"
+            },
+            {
+                "rule_set": [
+                    "geosite-openai",
+                    "geosite-google-gemini",
+                    "geosite-anthropic"
+                ],
+                "outbound": "proxy-ai"
             }
         ],
         "rule_set": [
             {
                 "type": "remote",
-                "tag": "geoip-cn",
+                "tag": "MetaCubeX-geosite-cn",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy"
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/cn.srs",
+                "download_detour": "auto"
             },
             {
                 "type": "remote",
-                "tag": "geosite-cn",
+                "tag": "SagerNet-geosite-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                "download_detour": "proxy"
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "MetaCubeX-geoip-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "SagerNet-geoip-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-private",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
+                "download_detour": "auto"
             },
             {
                 "type": "remote",
                 "tag": "geosite-bing",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
-                "download_detour": "proxy"
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-openai",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-google-gemini",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
+                "download_detour": "auto"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-anthropic",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
+                "download_detour": "auto"
             }
         ],
         "auto_detect_interface": true,
@@ -165,10 +577,8 @@
             "enabled": true
         },
         "clash_api": {
-            "external_controller": "127.0.0.1:9090",
-            "external_ui": "ui",
-            "external_ui_download_detour": "proxy",
-            "default_mode": "rule"
+            "external_controller": "0.0.0.0:9090",
+            "external_ui": "dashboard"
         }
     }
 }
