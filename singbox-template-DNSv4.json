@@ -100,7 +100,7 @@
         {
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
-            "server": "sub.bibibi.buzz",
+            "server": "sub.bibibi.space",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {

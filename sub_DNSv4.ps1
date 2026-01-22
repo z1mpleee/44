@@ -1,1 +1,1 @@
-curl.exe -o config.json -L "https://singbox.bibibi.buzz/config/https%3A%2F%2Foss7.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff%26tag%3DOuO&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json"
+curl.exe -o config.json -L "https://singbox.bibibi.space/config/https%3A%2F%2Foss7.cauenvao.click%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D32961d180f39cc9d79d8b2478125a2ff%26tag%3DOuO&file=https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json"
