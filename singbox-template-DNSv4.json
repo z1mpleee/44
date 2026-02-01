@@ -70,6 +70,7 @@
             "tag": "auto",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇲🇾 Evoxt MY",
                 "{OuO}"
             ]
         },
@@ -78,6 +79,7 @@
             "tag": "proxy",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇲🇾 Evoxt MY",
                 "{OuO}"
             ]
         },
@@ -86,6 +88,7 @@
             "tag": "proxy-ai",
             "outbounds": [
                 "🇰🇷 Oracle KR",
+                "🇲🇾 Evoxt MY",
                 "{OuO}"
             ]
         },
@@ -101,6 +104,17 @@
             "type": "trojan",
             "tag": "🇰🇷 Oracle KR",
             "server": "sub.bibibi.space",
+            "server_port": 443,
+            "password": "408ZQU.com",
+            "tls": {
+                "enabled": true,
+                "insecure": false
+            }
+        },
+        {
+            "type": "trojan",
+            "tag": "🇲🇾 Evoxt MY",
+            "server": "evoxt.bibibi.space",
             "server_port": 443,
             "password": "408ZQU.com",
             "tls": {
