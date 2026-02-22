@@ -120,6 +120,9 @@
             "tls": {
                 "enabled": true,
                 "insecure": false
+            },
+            "multiplex": {
+                "enabled": true
             }
         }
     ],

@@ -1,0 +1,26 @@
+{
+  "inbounds": [
+    {
+      "type": "trojan",
+      "listen": "::",
+      "listen_port": 443,
+      "users": [
+        {
+          "name": "trojan",
+          "password": "408ZQU.com"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "evoxt.bibibi.space",
+        "acme": {
+          "domain": "evoxt.bibibi.space",
+          "email": "admin@evoxt.bibibi.space"
+        }
+      },
+      "multiplex": {
+        "enabled": true
+      }
+    }
+  ]
+}
