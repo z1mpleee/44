@@ -139,6 +139,12 @@
                 "action": "hijack-dns"
             },
             {
+                "network": [
+                    "icmp"
+                ],
+                "outbound": "direct-out"
+            },
+            {
                 "type": "logical",
                 "mode": "or",
                 "rules": [
