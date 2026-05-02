@@ -11,6 +11,7 @@ horizon: https://raw.githubusercontent.com/z1mpleee/44/ma1n/horizon
 
 sub: http://sub.bibibi.space:25500/sub?target=clash&add_emoji=true&udp=true&list=true&url=
 
+sinbg-box: https://raw.githubusercontent.com/z1mpleee/44/refs/heads/ma1n/singbox.json
 sing-box-template: https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template.json
 sing-box-template-DNSv4: https%3A%2F%2Fraw.githubusercontent.com%2Fz1mpleee%2F44%2Fma1n%2Fsingbox-template-DNSv4.json
 
