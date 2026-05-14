@@ -119,7 +119,7 @@
                 "insecure": false
             },
             "multiplex": {
-                "enabled": true
+                "enabled": false
             }
         }
     ],
