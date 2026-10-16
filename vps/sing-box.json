@@ -13,13 +13,14 @@
       "tls": {
         "enabled": true,
         "server_name": "evoxt.bibibi.space",
-        "acme": {
-          "domain": "evoxt.bibibi.space",
+        "certificate_provider": {
+          "type": "acme",
+          "domain": ["evoxt.bibibi.space"],
           "email": "admin@evoxt.bibibi.space"
         }
       },
       "multiplex": {
-        "enabled": true
+        "enabled": false
       }
     }
   ]
