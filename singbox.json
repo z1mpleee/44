@@ -53,7 +53,6 @@
             "mtu": 9000,
             "auto_route": true,
             "strict_route": false,
-            "stack": "system",
             "sniff_override_destination": false
         }
     ],
@@ -197,63 +196,81 @@
                 "tag": "MetaCubeX-geosite-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/cn.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "SagerNet-geosite-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "MetaCubeX-geoip-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "SagerNet-geoip-cn",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "geosite-private",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "geosite-bing",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bing.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "geosite-openai",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "geosite-google-gemini",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             },
             {
                 "type": "remote",
                 "tag": "geosite-anthropic",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-anthropic.srs",
-                "download_detour": "auto"
+                "http_client": {
+                    "detour": "auto"
+                }
             }
         ],
         "auto_detect_interface": true,
