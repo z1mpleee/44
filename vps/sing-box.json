@@ -1,27 +1,43 @@
 {
-  "inbounds": [
-    {
-      "type": "trojan",
-      "listen": "::",
-      "listen_port": 443,
-      "users": [
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "inbounds": [
         {
-          "name": "trojan",
-          "password": "trojan#408@ZQU.com"
+            "type": "trojan",
+            "tag": "trojan-in",
+            "listen": "::",
+            "listen_port": 443,
+            "users": [
+                {
+                    "name": "trojan",
+                    "password": "trojan#408@ZQU.com"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "server_name": "evoxt.bibibi.space",
+                "certificate_provider": {
+                    "type": "acme",
+                    "domain": [
+                        "evoxt.bibibi.space"
+                    ],
+                    "email": "admin@evoxt.bibibi.space"
+                }
+            },
+            "multiplex": {
+                "enabled": false
+            }
         }
-      ],
-      "tls": {
-        "enabled": true,
-        "server_name": "evoxt.bibibi.space",
-        "certificate_provider": {
-          "type": "acme",
-          "domain": ["evoxt.bibibi.space"],
-          "email": "admin@evoxt.bibibi.space"
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct-out"
         }
-      },
-      "multiplex": {
-        "enabled": false
-      }
+    ],
+    "route": {
+        "final": "direct-out"
     }
-  ]
 }
